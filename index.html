@@ -1,0 +1,107 @@
+<!DOCTYPE Html>
+<html>
+
+<head>
+    <title>Parcial Practico</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body onload="load()">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="color: darkcyan;">PRIMER PARCIAL </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="form" id="inputData">
+
+        <h1 style="color:darkcyan">Registro Materia</h1>
+
+        <div class="top-row">
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="Codigo Materia" id="Codigo_Materia"
+                    maxlength="5" />
+            </div>
+
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="Nombre Materia" id="Nombre_Materia"
+                    maxlength="20" />
+            </div>
+        </div>
+
+        <div class="field-wrap">
+            <input type="text" required autocomplete="off" placeholder="Creditos" id="Creditos" maxlength="1" />
+        </div>
+
+        <h1 style="color: darkcyan;">Registro Notas</h1>
+
+        <div class="top-row">
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="Primer Corte" id="Primer_corte"
+                    maxlength="3" />
+            </div>
+
+            <div class="field-wrap">
+                <input type="text" required autocomplete="off" placeholder="Segundo Corte" id="Segundo_corte"
+                    maxlength="3" />
+            </div>
+        </div>
+
+        <div class="field-wrap">
+            <input type="text" required autocomplete="off" placeholder="Tercer corte" id="Tercer_corte" maxlength="3" />
+        </div>
+
+        <div class="col-20 text-center">
+            <button type="submit" class="btn btn-outline-primary  " id="submit" onclick="store()">GUARDAR</button>
+            <button type="submit" class="btn btn-outline-danger" id="clear" onclick="clearFields()">CANCELAR</button>
+        </div>
+
+
+    </div>
+
+    <div class="view" id="Tabla_materia">
+        <table class="table table-hover" style="width:920px; max-width:inherit">
+
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Cod Materia</th>
+                    <th>Nombre</th>
+                    <th>Creditos</th>
+                    <th>1 Corte</th>
+                    <th>2 Corte</th>
+                    <th>3 corte</th>
+                    <th>Definitiva</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+
+            <tbody id="userDetails">
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="js/style.min.js "></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>
